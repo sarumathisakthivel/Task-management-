@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Task Management Application</h1>
+
+    <!-- Login Section -->
+    <div id="loginSection" class="card">
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p>
+            Don't have an account?
+            <a href="javascript:void(0);" onclick="showRegister()">Register</a>
+        </p>
+    </div>
+
+    <!-- Register Section -->
+    <div id="registerSection" class="card" style="display:none;">
+        <h2>Register</h2>
+
+        <input type="text" id="newUsername" placeholder="Create Username">
+        <input type="password" id="newPassword" placeholder="Create Password">
+
+        <button onclick="register()">Register</button>
+
+        <p>
+            Already have an account?
+            <a href="javascript:void(0);" onclick="showLogin()">Login</a>
+        </p>
+    </div>
+
+    <!-- Task Section -->
+    <div id="taskSection" style="display:none;">
+
+        <h2>Welcome 👋</h2>
+
+        <div class="task-box">
+            <input type="text" id="taskInput" placeholder="Enter Task">
+            <input type="date" id="taskDate">
+
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
